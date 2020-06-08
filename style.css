@@ -50,6 +50,11 @@ h1,h2
     z-index: 999999;
 }
 
+@media (max-width: 800px) {
+    #navigation {
+      justify-content: center;
+    }
+}
 .nav-list
 {
     margin: 0 1rem;
@@ -126,6 +131,12 @@ section#Projects
     column-gap: 3rem;
     row-gap: 4rem;
     /* border: 2px solid blueviolet; */
+}
+
+@media (max-width: 900px) {
+    .project-grid {
+      grid-template-columns: minmax(0,1fr);
+    }
 }
 
 .project-grid img
@@ -213,5 +224,3 @@ section#Projects
 
 
 /* Media queries */
-@media screen and (max-width: 750px)
-{}

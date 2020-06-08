@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Cats.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat's and Code</title>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="top">
+         Cats and Code
+    </header>
+
+    <nav class ="flex-nav">
+        <a href="#" class="toggle"> -Menu-</a>
+        <ul>
+            <li><a href="#"> Item 01</a></li>
+            <li><a href="#"> Item 02</a></li>
+            <li><a href="#"> Item 03</a></li>
+            <li><a href="#"> Item 04</a></li>    
+            <li class="social"><a href="https://www.facebook.com/"> Facebook</a></li>
+            <li class="git"><a href="https://github.com/Slade27"> GitHub</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+        <img src="11392.jpg" alt="">
+    </section>
+
+    <section class="details">
+        <!-- DETAILS HERE -->
+        
+    </section>
+
+    <section class="sign">
+        <form action="" class="signup">
+            <input type="text" placeholder="Your Cat's Name">
+            <input type="text" placeholder="Favourite Coding Languauge">
+            <label><input type="checkbox" value="check" name="Do you Love your cat?" id="love"></form>Do You Love Your Cat?<label>
+        </form>
+
+    </section>
+
+    <footer>
+        @Slade27
+    </footer>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    
+</script>
+<script>
+    $(function()
+    {
+        $('.toggle').on('click',function()
+        {
+            $('.flex-nav ul').toggleClass('open');
+
+        });
+    });
+</script>
+
+</body>
+
+</html>

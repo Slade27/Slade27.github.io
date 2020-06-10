@@ -156,6 +156,7 @@ section#Projects
 .project-grid img
 {
    max-width: 100%;
+   image-rendering: optimizeSpeed;
 }
 
 .project-grid a
@@ -201,6 +202,10 @@ section#Projects
         width: 100%;
         grid-template-columns: minmax(0,1fr);
         margin: 3rem 0 0 0;
+    }
+    .project-grid img
+    {
+
     }
 }
 
@@ -274,6 +279,3 @@ section#Projects
         border-radius: 50%;
     }
 }
-
-
-/* Media queries */

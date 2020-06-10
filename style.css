@@ -262,9 +262,16 @@ section#Projects
     {
         font-size: 2rem;
     }
+    .contact-links
+    {
+        margin-bottom: 2rem;
+    }
     .contact-links a
     {
-        padding: 0 20px 0 0;
+        background-color: rebeccapurple;
+        padding: 10px;
+        margin-right: 20px;
+        border-radius: 50%;
     }
 }
 

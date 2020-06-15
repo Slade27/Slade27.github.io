@@ -24,8 +24,6 @@ body
     color: #f0f0f0;
 }
 
-
-
 h1,h2
 {
     font-family: 'Raleway',sans-serif;
@@ -105,8 +103,23 @@ section#welcome-section
     flex-direction: column;
     justify-content: center;
     background-color: #303841;
+
+    background-image: url(./me.jpg);
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    /* background-blend-mode: overlay; */
+    /* background-blend-mode: hard-light; */
+
+    
     height: 100vh;
     width: 100%;
+}
+@media screen and  (min-width: 1440px) {
+    section#welcome-section {
+      background-size: 100%;
+    }
 }
 
 

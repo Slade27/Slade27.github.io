@@ -102,7 +102,7 @@ section#welcome-section
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: #303841; */
+    background-color: #303841;
 
     background-image: url(./me.jpg);
     /* background-size: 100%; */

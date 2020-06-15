@@ -216,10 +216,10 @@ section#Projects
         grid-template-columns: minmax(0,1fr);
         margin: 3rem 0 0 0;
     }
-    .project-grid img
+    /* .project-grid img
     {
 
-    }
+    } */
 }
 
 /* Contact Section */

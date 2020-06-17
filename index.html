@@ -3,8 +3,54 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3b4e0ea9ad.js" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
 
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" -->
+        function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.arrayToDataTable([
+        ['Language', '1','2',{role: 'annotation'}],
+         ['', 10, 70,  'CSS'],            // RGB value
+         ['', 10, 80,  "HTML"],            // English color name
+         ['', 10, 65,  'JavaScript'],
+         ['', 10, 70,  'Python'],
+         ['', 10, 60,  'Java']
+        ]);
+        // Set chart options
+        var options = {
+            annotations: {
+            textStyle: {
+            fontName: 'Raleway',
+            color: 'white',
+            fontSize: 18,
+            bold: true,
+            italic: false}},
+
+            'title':'Languages',
+            'legend': {position: 'none'},
+            isStacked: true,
+            'backgroundColor': 'cadetblue',
+            'enableInteractivity': false,
+            'colors':['blue','#42bcf5'],
+            'titleTextStyle':{ color: 'white',fontName: 'Raleway, sans-serif',
+            fontSize: 50,
+            bold: true,
+            italic: false }
+            
+            // backgroundColor.stroke
+            
+            
+            };
+        var chart = new google.visualization.BarChart(document.getElementById('chart'));
+        chart.draw(data, options);
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
   crossorigin="anonymous">
 
@@ -30,9 +76,7 @@
         </section>
 
         <section id="skills">
-            <h2>Hey Skills here</h2>
-            <p>Bar chart</p>
-
+        <div id="chart" style="width: 100%;height: 50vh;"></div>
         </section>
 
         <section id="Projects">

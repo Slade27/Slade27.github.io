@@ -235,10 +235,14 @@ section#Projects
         grid-template-columns: minmax(0,1fr);
         margin: 3rem 0 0 0;
     }
-    /* .project-grid img
-    {
-
-    } */
+    h2#skills-title
+{
+    font-size: 2.5rem;
+    background-color: cadetblue;
+    font-weight: 700;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
 }
 
 /* Contact Section */

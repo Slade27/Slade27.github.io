@@ -10,10 +10,9 @@
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawAnimatedChart);
 
         function drawChart() {
-
-        // Create the data table.
         var data = new google.visualization.arrayToDataTable([
         ['Language', 'Experience',{role: 'annotation'}],
          ['', 0.70,  'CSS'],            // RGB value
@@ -43,6 +42,47 @@
             style: 'line' ,
             datum: {stem:{color:'white',length:2, style:'point'}}
             },
+            'legend': {position: 'none'},
+            'backgroundColor': 'cadetblue',
+            'enableInteractivity': true,
+            'colors':['#42bcf5'],
+            };
+        var chart = new google.visualization.BarChart(document.getElementById('chart'));
+        chart.draw(data, options);
+        }
+
+        function drawAnimatedChart()
+        {
+            var data = new google.visualization.arrayToDataTable([
+        ['Language', 'Experience',{role: 'annotation'}],
+         ['', 0.70,  'CSS'],            // RGB value
+         ['', 0.80,  "HTML"],            // English color name
+         ['', 0.60,  'JavaScript'],
+         ['', 0.65,  'Python'],
+         ['', 0.45,  'PhotoShop']
+        ]);
+
+            var animateOptions = {
+            animation: {duration:1500,easing: 'out', startup: true},
+            fontSize: 16,
+            fontName: 'Helvetica',
+            hAxis: { 
+                ticks: [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1], 
+                format: 'percent',
+                title: 'Experiece in Languages',
+                baselineColor: 'black',
+                textStyle:{ color:'white'},
+                titleTextStyle:{ color:'white', fontSize: 26}
+                },
+            chartArea:{left:'10%',top:10,width:'80%',height:'80%'},
+            annotations: {textStyle: {fontName: 'Helvetica',color: 'white',
+            fontSize: 18,
+            bold: true,
+            italic: false},
+            highContrast: true,
+            style: 'line' ,
+            datum: {stem:{color:'white',length:2, style:'point'}}
+            },
 
             'legend': {position: 'none'},
             'backgroundColor': 'cadetblue',
@@ -50,9 +90,10 @@
             'colors':['#42bcf5'],
             
             };
-        var chart = new google.visualization.BarChart(document.getElementById('chart'));
-        chart.draw(data, options);
+            var chart = new google.visualization.BarChart(document.getElementById('chart'));
+            chart.draw(data,animateOptions)
         }
+
         $(window).resize(function(){
         drawChart();
         });
@@ -72,6 +113,7 @@
         <nav id=navbar>
             <ul class="nav-list">
                 <li><a href="#welcome-section" class="nav-links">About</a></li>
+                <li><a onclick="javascript:drawAnimatedChart()" href="#skills" class="nav-links">Skills</a></li>
                 <li><a href="#Projects" class="nav-links">Work</a></li>
                 <li><a href="#contact" class="nav-links">Contact</a></li>
             </ul>

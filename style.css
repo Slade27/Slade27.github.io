@@ -124,6 +124,25 @@ section#welcome-section
     color: lightcoral;
 }
 
+#skills-title
+{
+    font-size: 3.5rem;
+    background-color: cadetblue;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+section#skills
+{
+    width: 100%;
+    height: 100%;
+}
+
+div#chart
+{
+    /* border: 2px solid rebeccapurple; */
+}
+
 /* Project section */
 section#Projects
 {
@@ -135,6 +154,12 @@ section#Projects
     overflow: hidden;
     background-color: cadetblue;
 }
+
+/* div#chart
+{
+    width: 100%;
+    height: 100%;
+} */
 
 #Projects header
 {

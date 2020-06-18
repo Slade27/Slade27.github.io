@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3b4e0ea9ad.js" crossorigin="anonymous"></script>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
@@ -14,42 +16,40 @@
         // Create the data table.
         var data = new google.visualization.arrayToDataTable([
         ['Language', '1','2',{role: 'annotation'}],
-         ['', 10, 70,  'CSS'],            // RGB value
-         ['', 10, 80,  "HTML"],            // English color name
-         ['', 10, 65,  'JavaScript'],
-         ['', 10, 70,  'Python'],
-         ['', 10, 60,  'Java']
+         ['', 5, 70,  'CSS'],            // RGB value
+         ['', 5, 80,  "HTML"],            // English color name
+         ['', 5, 60,  'JavaScript'],
+         ['', 5, 55,  'Python'],
+         ['', 5, 50,  'Java']
         ]);
         // Set chart options
         var options = {
+            chartArea:{left:20,top:20,width:'90%',height:'80%'},
             annotations: {
             textStyle: {
-            fontName: 'Raleway',
+            fontName: 'sans-serif',
             color: 'white',
             fontSize: 18,
             bold: true,
             italic: false}},
 
-            'title':'Languages',
             'legend': {position: 'none'},
             isStacked: true,
+            'backgroundColor.stroke': 'red',
+            'backgroundColor.strokeWidth': 5,
             'backgroundColor': 'cadetblue',
             'enableInteractivity': false,
             'colors':['blue','#42bcf5'],
-            'titleTextStyle':{ color: 'white',fontName: 'Raleway, sans-serif',
-            fontSize: 50,
-            bold: true,
-            italic: false }
-            
-            // backgroundColor.stroke
-            
             
             };
         var chart = new google.visualization.BarChart(document.getElementById('chart'));
         chart.draw(data, options);
-    }
+        }
+        $(window).resize(function(){
+        drawChart();
+        });
     </script>
-
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
   crossorigin="anonymous">
@@ -76,7 +76,8 @@
         </section>
 
         <section id="skills">
-        <div id="chart" style="width: 100%;height: 50vh;"></div>
+            <h2 id=skills-title>Languages</h2>
+        <div id="chart" style="width: 100%;height: 100%;"></div>
         </section>
 
         <section id="Projects">

@@ -125,13 +125,14 @@ section#welcome-section
     color: lightcoral;
 }
 
-#skills-title
+h2#skills-title
 {
     font-size: 3.5rem;
     background-color: cadetblue;
     font-weight: 700;
     padding-top: 5rem;
     padding-bottom: 1rem;
+    border: 2px solid rebeccapurple;
 }
 
 section#skills

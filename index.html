@@ -16,9 +16,15 @@
         ['Language', 'Experience',{role: 'annotation'}],
          ['', 0.70,  'CSS'],            
          ['', 0.80,  "HTML"],           
+<<<<<<< HEAD
          ['', 0.56,  'JavaScript'],
          ['', 0.4,  'JQuery'],
          ['', 0.6,  'Python']
+=======
+         ['', 0.60,  'JavaScript'],
+         ['', 0.65,  'Python'],
+         ['', 0.45,  'JQuery']
+>>>>>>> 3944e8dbe0b38d067cccbc4223d3a597f570bf78
         ]);
         // Set chart options
         var options = {
@@ -26,10 +32,10 @@
             fontName: 'Helvetica',
             hAxis: { 
                 ticks: [0,0.2,0.4,0.6,0.8,1], 
-                format: 'percent',
+                format: 'none',
                 title: 'Experiece in Languages',
                 baselineColor: 'black',
-                textStyle:{ color:'white'},
+                textStyle:{ color:'cadetblue'},
                 titleTextStyle:{ color:'white', fontSize: 26}
                 },
             chartArea:{left:'10%',top:10,width:'80%',height:'80%'},
@@ -38,11 +44,11 @@
             bold: true},
             highContrast: true,
             style: 'line' ,
-            datum: {stem:{color:'white',length:2, style:'point'}}
+            datum: {stem:{color:'black',length:0, style:'line'}}
             },
             'legend': {position: 'none'},
             'backgroundColor': 'cadetblue',
-            'enableInteractivity': true,
+            'enableInteractivity': false,
             'colors':['#42bcf5'],
             };
         var chart = new google.visualization.BarChart(document.getElementById('chart'));
@@ -57,9 +63,15 @@
         ['Language', 'Experience',{role: 'annotation'}],
          ['', 0.70,  'CSS'],            // RGB value
          ['', 0.80,  "HTML"],            // English color name
+<<<<<<< HEAD
          ['', 0.56,  'JavaScript'],
          ['', 0.4,  'JQuery'],
          ['', 0.6,  'Python']
+=======
+         ['', 0.60,  'JavaScript'],
+         ['', 0.65,  'Python'],
+         ['', 0.45,  'JQuery']
+>>>>>>> 3944e8dbe0b38d067cccbc4223d3a597f570bf78
         ]);
 
             var animateOptions = {
@@ -68,10 +80,10 @@
             fontName: 'Helvetica',
             hAxis: { 
                 ticks: [0,0.2,0.4,0.6,0.8,1], 
-                format: 'percent',
+                format: 'none',
                 title: 'Experiece in Languages',
                 baselineColor: 'black',
-                textStyle:{ color:'white'},
+                textStyle:{ color:'cadetblue'},
                 titleTextStyle:{ color:'white', fontSize: 26}
                 },
             chartArea:{left:'10%',top:10,width:'80%',height:'80%'},
@@ -81,12 +93,12 @@
             italic: false},
             highContrast: true,
             style: 'line' ,
-            datum: {stem:{color:'white',length:2, style:'point'}}
+            datum: {stem:{color:'black',length:2, style:'point'}}
             },
 
             'legend': {position: 'none'},
             'backgroundColor': 'cadetblue',
-            'enableInteractivity': true,
+            'enableInteractivity': false,
             'colors':['#42bcf5'],
             
             };
@@ -122,11 +134,11 @@
     <main id="main">
         <section id="welcome-section">
             <h1>Hey I'm Shea</h1>
-            <p>A web developer</p>
+            <p>a web developer <br>based in Saskatchewan </p>
         </section>
 
         <section id="skills">
-            <h2 id=skills-title>Developing</h2>
+            <h2 id=skills-title>Developing Skills</h2>
         <div id="chart" style="width: 100%;height: 70vh;"></div>
         </section>
 

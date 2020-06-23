@@ -5,21 +5,20 @@ let x = 0;
 let y= 0;
 let isDrawing = false;
 
-canvas.width = 500;
-canvas.height = 500;
+canvas.width = 700;
+canvas.height= 600;
 
 
 function selecting(){
 var color = document.getElementById("color");
 var select = color.options[color.selectedIndex].value;
-console.log(select);
-
+// console.log(select);
 return ctx.strokeStyle = select;
 }
 
 function erase(){
   ctx.clearRect(0,0, canvas.width, canvas.height);
-  console.log("executed");
+  // console.log("executed");
 }
 
 canvas.addEventListener('mousedown', (e) => {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="draw.css">
+    <title>Project</title>
+</head>
+<body>
+    <div class="draw-container">
+        <canvas id="draw" width="500px" height="500px"></canvas>
+        <select id="color" onchange="selecting()">
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="black">Black</option>
+                <option value="indigo">Indigo</option>
+                <option value="cadetblue">CadetBlue</option>
+                <option value="grey">Grey</option>
+            </select>
+        
+    </div>
+    
+
+    <img id="drawThis" src="https://source.unsplash.com/random/400x400" alt="img" style="display: none;">
+    
+    <script src="./draw.js"></script>
+    
+</body>
+</html>

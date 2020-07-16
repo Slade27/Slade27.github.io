@@ -16,6 +16,14 @@ var select = color.options[color.selectedIndex].value;
 return ctx.strokeStyle = select;
 }
 
+function widthSelect(){
+  var w = document.getElementById("width");
+  var s = w.options[w.selectedIndex].value;
+  s = parseInt(s);
+  console.log(s);
+  return ctx.lineWidth = s; //select width of line
+  }
+
 function erase(){
   ctx.clearRect(0,0, canvas.width, canvas.height);
   // console.log("executed");
@@ -47,7 +55,7 @@ canvas.addEventListener('mouseup', (e) => {
 function draw(context,x1,y1,x2,y2){
   ctx.strokeStyle = selecting(); //choose color
   ctx.beginPath();
-  context.lineWidth = 2;
+  context.lineWidth = widthSelect();
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);
   context.stroke();

@@ -1,6 +1,12 @@
+var script = document.createElement('script');
+{/* <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> */}
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 var compliments = [
     'You look nice today',
-    'Fancy seeing you here',
+    'You are loved',
     'Have you been working out?',
     'I feel the need to impress you.',
     'You could probably lead a rebellion.',
@@ -27,6 +33,7 @@ var colors = ['#16a085', '#27ae60', '#2c3e50',
 "#472E32", "#BDBB99", "#77B1A9", "#73A857", "#2ab7ca", 
 '#f4b6c2', '#005b96', '#851e3e', '#dec3c3', '#f6cd61',
 '#feb2a8', '#ee4035'];
+
 //generate random number[1-19]
 function rand(len){
 var randomNumber = Math.floor(Math.random() * len.length); 
@@ -35,12 +42,15 @@ return randomNumber;
 
 function generate(){
     console.log("Generating");
+    // $("#compliment").fadeOut(3000);
+    
     document.getElementById('compliment').innerHTML = compliments[rand(compliments)];
+    // $("#compliment").fadeIn(3000);
 }
 
 function color(){
-    document.body.style.backgroundColor = colors[rand(colors)];
-    document.getElementById("compliment").style.color = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = colors[rand(colors)]; //color background
+    document.getElementById("compliment").style.color = document.body.style.backgroundColor; //color text
 }
 
 // document.onload = generate(); //load first compliment
@@ -48,6 +58,8 @@ document.onload = color(); // load first color
 
 /*Grabs new quote on button press */
 document.getElementById("new-comp").addEventListener('click', function(){
+    $("#compliment").fadeOut(1);
     color();
     generate();
+    $("#compliment").fadeIn(2500);
 });

@@ -1,4 +1,5 @@
 body{
+    overflow: hidden;
     background-color: rgb(13, 109, 109);
     width: 100%;
     height: 100%;
@@ -82,5 +83,6 @@ button#new-comp{
     border-radius: 0.2em;
     border: whitesmoke;
     outline: none;
+    box-shadow: 2px 2px 2px 0.5px rgba(0, 0, 0, 0.4);
 
 }

@@ -29,6 +29,9 @@ var compliments = [
     'I have heard so many good things about you.',
     'I love the way you laugh',
     'The stars look brighter with you under them',
+    'You bring out the best in people.',
+    'You are so goal driven.',
+    'I believe in you.'
 ]
 
 var colors = ['#16a085', '#27ae60', '#2c3e50', 

@@ -5,9 +5,13 @@ let x = 0;
 let y= 0;
 let isDrawing = false;
 
-canvas.width = 700;
-canvas.height= 600;
+canvas.width = window.innerWidth - 20;
+canvas.height= window.innerHeight - (0.2*window.innerHeight);
 
+   window.onresize = function() {
+   canvas.width = window.innerWidth - 20;
+   canvas.height= window.innerHeight - (0.2*window.innerHeight);
+};
 
 function selecting(){
 var color = document.getElementById("color");
@@ -62,9 +66,10 @@ clientY: touch.clientY
 });
 canvas.dispatchEvent(mouseEvent);
 }, false);
+
 canvas.addEventListener("touchend", function (e) {
 var mouseEvent = new MouseEvent("mouseup", {});
-canvas.dispatchEvent(mouseEvent);
+// canvas.dispatchEvent(mouseEvent);
 }, false);
 canvas.addEventListener("touchmove", function (e) {
 var touch = e.touches[0];
@@ -84,22 +89,8 @@ y: touchEvent.touches[0].clientY - rect.top
 };
 }
 
-// Prevent scrolling when touching the canvas
-document.body.addEventListener("touchstart", function (e) {
-  if (e.target == canvas) {
-    e.preventDefault();
-  }
-}, false);
-document.body.addEventListener("touchend", function (e) {
-  if (e.target == canvas) {
-    e.preventDefault();
-  }
-}, false);
-document.body.addEventListener("touchmove", function (e) {
-  if (e.target == canvas) {
-    e.preventDefault();
-  }
-}, false);
+
+
 
 
 function draw(context,x1,y1,x2,y2){

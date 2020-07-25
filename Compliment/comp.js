@@ -22,7 +22,7 @@ var compliments = [
     'Is that your picture next to "charming" in the dictionary?',
     'You\'re great at figuring stuff out.',
     'You are a light shining in darkness.',
-    'I can\'t take my eys off you.',
+    'I can\'t take my eyes off you.',
     'You are stronger than you think.',
     'Anyone would be lucky to have you.',
     'You have a great smile.',

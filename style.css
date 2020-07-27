@@ -33,6 +33,18 @@ h1,h2
     color: #f0f0f0;
     font-size: 4.5rem;
 }
+
+section{
+    background-color: cadetblue;
+    text-align: center;
+}
+
+header{
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+}
+
 @media screen and (max-width: 600px) {
     h1,h2 {
       font-size: 2rem;
@@ -104,7 +116,6 @@ section#welcome-section
     flex-direction: column;
     justify-content: center;
     background-color: #303841;
-
     background-image: url(./me.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -129,23 +140,18 @@ section#welcome-section
 h2#skills-title
 {
     font-size: 3.5rem;
-    background-color: cadetblue;
     font-weight: 700;
     padding-top: 5rem;
     padding-bottom: 1rem;
 }
 
+
 section#skills
 {
     width: 100%;
     height: 100%;
-    background-color: cadetblue;
 }
 
-div#chart
-{
-    background-color: cadetblue;
-}
 
 /* Project section */
 section#Projects
@@ -154,12 +160,9 @@ section#Projects
     text-align: center;
     justify-content: center;
     text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
-    /* height: 100vh; */
     width: 100%;
     overflow: hidden;
-    background-color: cadetblue;
 }
-
 
 #Projects header
 {

@@ -151,13 +151,48 @@ section#skills
     height: 100%;
 }
 /* -------------------------------------------------About Section--------------------------------------- */
-div.about-me{
+
+div.about-container{
     display: grid;
-    border: 1px solid crimson;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    
+    /* border: 1px solid crimson; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ; 
+    row-gap: 9rem;
 }
+
+#my-photo
+{
+    grid-row: span 2;
+}
+
+
+.about-container i {
+    color: #be3144;
+}
+.about-me{
+    border: 2px solid red;
+}
+
+.about-me img{
+    transform: scale(0.2);
+}
+.about-me ul{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 1px solid slateblue;
+}
+
+.about-item
+{
+    text-align: start;
+    font-size: 1.2rem;
+}
+.about-item i{
+    color: black;
+}
+
 
 /* --------------------------------------------------Project section------------------------------------*/
 section#Projects
@@ -183,16 +218,13 @@ section#Projects
     max-width: 100%;
     max-height: 100%;
     position: relative;
-
     margin-top: 3rem;
     margin-right: 1rem;
     margin-left: 1rem;
-
     grid-template-columns: minmax(0, 1fr) 1fr;
     grid-template-rows: auto auto auto;
     column-gap: 3rem;
     row-gap: 4rem;
-    /* border: 2px solid blueviolet; */
 }
 
 .project-grid img

@@ -51,7 +51,7 @@ header{
     }
 }
 
-/* --Navigation-- */
+/* --------------------------------------------------Navigation------------------------------------*/
 
 #navigation
 {
@@ -109,7 +109,7 @@ header{
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Welcome/About */
+/* --------------------------------------------------Welcome Section------------------------------------*/
 section#welcome-section
 {
     display: flex;
@@ -181,15 +181,9 @@ div.about-container{
     border-radius: 50%;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-
-
 .about-container i {
     color: #be3144;
 }
-.about-me{
-    /* border: 2px solid #be3144; */
-}
-
 .about-me ul{
     display: inline-block;
     margin: 0;
@@ -299,7 +293,7 @@ section#Projects
 }
 }
 
-/* Contact Section */
+/* --------------------------------------------------Contact section------------------------------------*/
 
 #contact
 {

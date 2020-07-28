@@ -142,7 +142,7 @@ h2#skills-title
     font-size: 3.5rem;
     font-weight: 700;
     padding-top: 5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 6rem;
 }
 
 section#skills
@@ -151,18 +151,35 @@ section#skills
     height: 100%;
 }
 /* -------------------------------------------------About Section--------------------------------------- */
+section#about{
+    height: 100vh;
+}
+#about-header{
+    padding-top: 8rem;
+    font-size: 4rem;
+}
 
+.about-title
+{
+    font-size: 3rem;
+}
 div.about-container{
     display: grid;
+    padding: 8rem;
     /* border: 1px solid crimson; */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr ; 
-    row-gap: 9rem;
+    grid-template-rows: 1fr 1fr; 
+    row-gap: 7rem;
 }
 
 #my-photo
 {
     grid-row: span 2;
+}
+#my-img
+{
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -170,24 +187,21 @@ div.about-container{
     color: #be3144;
 }
 .about-me{
-    border: 2px solid red;
+    /* border: 2px solid #be3144; */
 }
 
-.about-me img{
-    transform: scale(0.2);
-}
 .about-me ul{
     display: inline-block;
     margin: 0;
     padding: 0;
     vertical-align: top;
-    border: 1px solid slateblue;
+    /* border: 1px solid slateblue; */
 }
 
 .about-item
 {
     text-align: start;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .about-item i{
     color: black;

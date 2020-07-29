@@ -152,46 +152,65 @@ section#skills
 }
 /* -------------------------------------------------About Section--------------------------------------- */
 section#about{
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(73, 119, 121); */
 }
 #about-header{
-    padding-top: 8rem;
+    padding-top: 4.9rem;
     font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .about-title
 {
     font-size: 3rem;
+    text-shadow:  0.5px 1px 2px rgba(0,0,0,0.5);
 }
 div.about-container{
+    margin-top: -8rem;
     display: grid;
     padding: 8rem;
-    /* border: 1px solid crimson; */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr; 
     row-gap: 7rem;
+    column-gap: 1rem;
 }
 
 #my-photo
 {
     grid-row: span 2;
+    background-color: cadetblue;
+    box-shadow: none;
+    /* border: none; */
 }
 #my-img
 {
     border-radius: 50%;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    width: 14em;
+    height: auto;
 }
 .about-container i {
     color: #be3144;
 }
 .about-me ul{
     display: inline-block;
+    align-self: center;
     margin: 0;
     padding: 0;
     vertical-align: top;
     /* border: 1px solid slateblue; */
 }
-
+.about-me
+    {
+        align-self: center;
+        height: 100%;
+        width: 100%;
+        padding-left: 2rem;
+        background-color: rgb(75, 118, 119);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
 .about-item
 {
     text-align: start;
@@ -199,6 +218,147 @@ div.about-container{
 }
 .about-item i{
     color: black;
+}
+@media screen and  (max-width: 1000px) {
+    #my-img
+    {
+        width: 11em;
+        height: auto;
+    }
+    .about-item
+    {
+        text-align: start;
+        font-size: 1.2rem;
+        padding: 5px 0px;
+    }
+}
+@media screen and  (max-width: 1300px) {
+   
+    section#about{
+        height: 100%;
+        width: 100%;
+        /* background-color: rgb(73, 119, 121); */
+    }
+    #about-header{
+        padding-top: 7rem;
+        font-size: 3.5rem;
+        /* padding-left: 3rem; */
+        margin-bottom: -6rem;
+    }
+    div.about-container{
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr; 
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
+    #my-photo
+    {
+            grid-row: 1;
+    }
+    #personal
+    {
+            grid-column: span 2;
+    }
+    #my-img
+    {
+        width: 9em;
+        height: auto;
+        border-radius: 50%;
+        align-self: center;
+    }
+    .about-me
+    {
+        align-self: center;
+        padding-top: 3rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        padding-bottom: -2rem;
+        height: 100%;
+        width: 100%;
+        border: 2px solid floralwhite;
+        border-radius: 50%;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+    .about-me h3{
+        font-size: 2.5rem;
+    }
+    .about-me ul{
+        align-self: center;
+        padding: 0;
+    }
+    .about-item
+    {
+        height: 100%;
+        width: 100%;
+        text-align: start;
+        font-size: 1.2rem;
+        padding: 5px 0px;
+    }
+}
+@media screen and  (max-width: 800px) {
+    div.about-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        row-gap: 1rem;
+    }
+    #personal
+    {
+            grid-column: span 1;
+    }
+    #my-img
+    {
+        width: 10em;
+        height: auto;
+    }
+    .about-me
+    {
+        padding-bottom: 4rem;
+    }
+    .about-item
+    {
+        text-align: start;
+        font-size: 1.6rem;
+        padding: 5px 0px;
+    }
+}
+@media screen and  (max-width: 700px) {
+     h3.about-title{
+         width: 100%;
+         height: auto;
+         font-size: 1.6rem;
+         text-align: center;
+     }
+    div.about-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        row-gap: 1rem;
+    }
+    #personal
+    {
+            grid-column: span 1;
+    }
+    #my-photo
+    {
+    display: none;
+    }
+    .about-me
+    {
+        padding-bottom: 0rem;
+        border-radius: 0;
+        border: none;
+    }
+    .about-item
+    {
+        text-align: start;
+        font-size: 1.3rem;
+        padding: 5px 0px;
+    }
 }
 
 

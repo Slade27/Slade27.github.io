@@ -327,10 +327,6 @@ div.about-container{
     {
             grid-column: span 1;
     }
-    #my-photo
-    {
-    /* display: none; */
-    }
     #my-img
     {
         width: 13rem;

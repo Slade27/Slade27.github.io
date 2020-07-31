@@ -22,6 +22,7 @@ body
     font-size: 1.8rem;
     line-height: 1.4;
     color: #f0f0f0;
+    background-color: cadetblue;
 }
 
 h1,h2
@@ -157,10 +158,35 @@ section#about{
     background-color: cadetblue;
     /* background-color: rgb(73, 119, 121); */
 }
+
+.fade-in
+{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in-visible
+{
+    opacity: 1;
+}
+
+.move-up
+{
+    transform: translateY(10vh);
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+}
+.move-up.fade-in-visible
+{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 #about-header{
-    padding-top: 4.9rem;
+    padding-top: 4rem;
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .about-title
